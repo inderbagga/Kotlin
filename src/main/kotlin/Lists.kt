@@ -35,7 +35,7 @@ fun main(){
 
     personList.asReversed().forEach { println("${it.name} is ${it.age} years old!") }
     println(personList.sumOf { it.age })
-    println(personList.sortBy { it.age }.also { println(personList.toString()) })
+    personList.sortBy { it.age }.also { println(personList.toString()) }
 
 
 }
