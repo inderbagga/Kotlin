@@ -6,8 +6,6 @@ fun main(){
     userA.updateAge(age=33)
     println("UserA age is ${userA.age}")
     println("UserB age is ${User().age}")
-
-
 }
 
 //Blueprint
