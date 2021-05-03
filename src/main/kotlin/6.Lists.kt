@@ -37,7 +37,7 @@ fun main(){
     println(personList.sumOf { it.age })
     personList.sortBy { it.age }.also { println(personList.toString()) }
 
-
+    val iList:List<Int>
 }
 
 data class Person(val name:String,val age:Int)
