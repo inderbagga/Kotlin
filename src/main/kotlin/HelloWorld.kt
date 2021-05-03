@@ -28,9 +28,9 @@ fun main(){
     println(shortValue)
     val byteValue:Byte=127 //8 bit
     println(byteValue)
-    val floatValue:Float=545F //64 bit
+    val floatValue:Float=545F //32 bit
     println(floatValue)
-    val doubleValue:Double=3512324.0 //32 bit
+    val doubleValue:Double=3512324.0 //64 bit
     println(doubleValue)
 
     //Operations on Variable
@@ -49,6 +49,4 @@ fun main(){
 
     val fullName="$firstName $lastName"
     println(fullName)
-
-
 }
