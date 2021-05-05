@@ -12,7 +12,10 @@ fun main(){
 }
 
 //class with primary constructor
-class Driver(private val age:Int=0, private val fName:String, private val lName:String){
+class Driver(age:Int=0, fName:String, lName:String){
+
+    var myAge:Int = age
+    var fullName:String = "$fName $lName"
 
     constructor(fName:String, age:Int) : this(age,fName,"") {
         println("Secondary Constructor called")
@@ -21,7 +24,4 @@ class Driver(private val age:Int=0, private val fName:String, private val lName:
     constructor(fName:String="Default") : this(18,fName,"") {
         println("Default Constructor called")
     }
-
-    var myAge=age;
-    var fullName="$fName $lName"
 }
