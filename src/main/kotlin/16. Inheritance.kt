@@ -34,6 +34,5 @@ class Cat(type:String, age:Int): Animal(type,age){
 class Addition(num1:Int,num2:Int):Math(num1,num2)
 
 open class Math(private val num1:Int, private val num2:Int){
-
    open fun add()=num1.plus(num2)
 }

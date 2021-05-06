@@ -26,8 +26,6 @@ fun main(){
 
     println(personB)
     println(personC)
-
-
 }
 
 fun fullName(fName:String,lName:String="Kumar")="The name is $fName $lName"
