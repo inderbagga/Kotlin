@@ -9,3 +9,4 @@
 7. Data classes are useful for destructuring and holding similar data efficiently.
 8. To inherit a class, override its member function or data member; each needs to be declared as open. 
 9. Base class can be instantiated, but abstract class or interface.
+10. Pair is a collection of 2 variables and Triple is a collection of 3 variables.
