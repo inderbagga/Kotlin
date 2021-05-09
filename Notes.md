@@ -10,5 +10,7 @@
 8. To inherit a class, override its member function or data member; each needs to be declared as open. 
 9. Base class can be instantiated, but abstract class or interface.
 10.Pair is a collection of 2 variables and Triple is a collection of 3 variables.
-11.lateinit,lazy data members are mutable,immutable respectively. So they are declared using var/val data values accordingly.
+11.lateinit modifier is used with var data type. It can change values as per proper execution. It does not work with nullable types.
+12.lazy can be initialized only once; so it is used with val data type.
+13.Enumerated class contains set of constant values. Each constant enum is itself an object.   
    
