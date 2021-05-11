@@ -12,5 +12,9 @@
 10.Pair is a collection of 2 variables and Triple is a collection of 3 variables.
 11.lateinit modifier is used with var data type. It can change values as per proper execution. It does not work with nullable types.
 12.lazy can be initialized only once; so it is used with val data type.
-13.Enumerated class contains set of constant values. Each constant enum is itself an object.   
+13.Enumerated class contains set of constant values. Each constant enum is itself an object.
+14.Scope Functions are functions which execute a block of code in context of an object. Scope Functions create temporary scope inside which you access the object as it or this.
+   * We use 'it' to refer object in case of ***let*** scope function. It returns the result. It can also be used to check nullable objects using safe call operator.
+   * 
+    
    
