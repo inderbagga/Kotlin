@@ -40,4 +40,9 @@ fun main(){
     val iList:List<Int>
 }
 
-data class Person(val name:String,val age:Int)
+data class Person(val name:String,val age:Int){
+
+    var address="undefined"
+
+    fun getInfo():String="$name of age $age resides in $address"
+}
