@@ -11,4 +11,11 @@ fun main(){
 
     //java approach
     if(nullableString!=null) println(nullableString)
+
+    //run scope function
+    val info=Person("Sachin",41).run {
+        address="Mumbai"
+        getInfo()
+    }
+    println(info)
 }
