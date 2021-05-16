@@ -18,4 +18,11 @@ fun main(){
         getInfo()
     }
     println(info)
+
+    //apply scope function
+    var pInfo=Person("James",23).apply {
+        address="england"
+        phoneNumber=987654321
+    }
+    println(pInfo.toString())
 }

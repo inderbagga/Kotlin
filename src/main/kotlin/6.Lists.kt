@@ -44,5 +44,11 @@ data class Person(val name:String,val age:Int){
 
     var address="undefined"
 
+    var phoneNumber=0
+
     fun getInfo():String="$name of age $age resides in $address"
+
+    override fun toString(): String {
+        return "$name can be called on $phoneNumber"
+    }
 }

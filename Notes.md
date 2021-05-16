@@ -14,7 +14,9 @@
 12.lazy can be initialized only once; so it is used with val data type.
 13.Enumerated class contains set of constant values. Each constant enum is itself an object.
 14.Scope Functions are functions which execute a block of code in context of an object. Scope Functions create temporary scope inside which you access the object as it or this.
-   * We use 'it' to refer object in case of ***let*** scope function. It returns the result. It's used to access the result of call chains. It can also be used to for null check on objects of nullable type using safe call operator.
-   * We use 'this' to refer object inside ***run*** scope function.It also returns the result. This is used when we need to initialize an object and perform some operation on it.
+   * 'it' refers to object in case of ***let*** scope function. It returns the result. It's used to access the result of call chains. It can also be used to for null check on objects of nullable type using safe call operator.
+   * 'this' refers to object inside ***run*** scope function.It also returns the result. This is used when we need to initialize an object and perform some operation on it.
+   * 'this' refers to object inside ***apply*** scope function. It's used to initialize an object and return the same object.
+   * 'it' refers to object inside ***also*** scope function.
     
    
