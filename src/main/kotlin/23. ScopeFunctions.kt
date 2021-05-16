@@ -25,4 +25,11 @@ fun main(){
         phoneNumber=987654321
     }
     println(pInfo.toString())
+
+    //also scope function
+    var mappedList= mutableListOf("one","thirty","nine")
+        .map { it.length }
+
+    mappedList.also{ println("before $it") }
+        .filter{ it>3 }.also { println("after $it") }
 }

@@ -17,6 +17,7 @@
    * 'it' refers to object in case of ***let*** scope function. It returns the result. It's used to access the result of call chains. It can also be used to for null check on objects of nullable type using safe call operator.
    * 'this' refers to object inside ***run*** scope function.It also returns the result. This is used when we need to initialize an object and perform some operation on it.
    * 'this' refers to object inside ***apply*** scope function. It's used to initialize an object and return the same object.
-   * 'it' refers to object inside ***also*** scope function.
+   * 'it' refers to object inside ***also*** scope function. It is used to perform some side operation like logging or debugging.
+   * ***let*** and ***run*** scope functions transform the object, but ***apply*** and ***also*** doesn't.
     
    
