@@ -19,5 +19,18 @@
    * 'this' refers to object inside ***apply*** scope function. It's used to initialize an object and return the same object.
    * 'it' refers to object inside ***also*** scope function. It is used to perform some side operation like logging or debugging.
    * ***let*** and ***run*** scope functions transform the object, but ***apply*** and ***also*** doesn't.
+15.Generics are the powerful features that allow us to define classes, methods and properties which are accessible using different data types while keeping a check of the compile-time type safety.
+   * We always use angle brackets <> to specify the type parameter. 
+   * Advantages of generic –
+     * *Type casting is evitable*- No need to typecast the object. 
+     * *Type safety*- Generic allows only single type of object at a time.
+     * *Compile time safety*- Generics code is checked at compile time for the parameterized type so that it avoids run time error. 
+   * Generic types are invariant in Kotlin. Invariance is the property by which a standard generic function/class already defined for a particular data type, cannot accept or return another datatype.
+   * Variance is of two types-
+     * Declaration-site variance(using in and out)
+       * we can use the out keyword on the generic type which means we can assign this reference to any of its supertypes. The out value can only be produced by the given class but can not be consumed.
+       * we can use the in keyword on the generic type which means we can assign this reference to any of its subtypes. The in keyword can be used only on the parameter type that is consumed, not produced.
+     * Use-site variance: Type projection 
+     
     
    
