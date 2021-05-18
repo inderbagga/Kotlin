@@ -5,13 +5,29 @@ fun main(){
     val objC=CustomType(listOf(1,2,3))
 
     //Variance with out
-    val outClassObject=Out("String")
+    val outClassObject:Out<String> =Out("String")
     val superTypeObject:Out<Any> =outClassObject
 
     //Variance with in
     val inClassObject: In<Number> = In()
     val subTypeObject : In<Int> = inClassObject
+
+    //Co-Variance
+    val coSubType:MyClass<out Any> =MyClass<String>() //String is a subtype of Any
+    val anotherCoSubType:AnotherClass<Any> =AnotherClass<String>() //String is a subtype of Any
+
+    //Contra-Variance
+    var contraObject:Container<Chair> =Container<Furniture>()//Furniture is a supertype of Chair
+
 }
+//Contra-Variance
+class Chair : Furniture() {}
+open class Furniture {}
+class Container<in T>
+
+//Co-Variance
+class MyClass<T>
+class AnotherClass<out T>
 
 class CustomType<T>(value:T){
     init{
