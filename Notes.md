@@ -38,3 +38,5 @@
 16. A function which can accept a function as parameter or can return a function is called *Higher-Order function*.
 17. With extensions, we can add more functionality to the existing classes, without inheriting them. When a function is added to an existing class it is known as Extension Function.
     * They are resolved statically i.e. which extension function is executed depends totally on the type of the expression on which it is invoked, rather than on the type resolved on the final execution of the expression at runtime.
+    * Extension functions can also be defined with the class type that is nullable.
+    
