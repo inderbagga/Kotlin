@@ -36,4 +36,5 @@
         * Type Projection: If we want to copy all the elements of an array of some type into the array of Any type then it can be possible, but to allow the compiler to compile our code we need to annotate the input parameter with the out keyword. This makes the compiler to infer that input argument can be of any type that is a subtype of the Any.
         * Star Projection: When we do not know about the specific type of the value, and we just want to print all the elements of an array then we use star(*) projection.
 16. A function which can accept a function as parameter or can return a function is called *Higher-Order function*.
-17. 
+17. With extensions, we can add more functionality to the existing classes, without inheriting them. When a function is added to an existing class it is known as Extension Function.
+    * They are resolved statically i.e. which extension function is executed depends totally on the type of the expression on which it is invoked, rather than on the type resolved on the final execution of the expression at runtime.
