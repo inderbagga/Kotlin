@@ -4,7 +4,7 @@ fun main(){
     val result=square(5)
     println(result)
 
-    //Lambda usecase
+    //Lambda Expression usecase
     val square :(Int) -> (Int) = { number ->
         number *number}
     println(square(6))
