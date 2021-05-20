@@ -18,6 +18,19 @@ fun main(){
     x.output()
     null.output()
 
+    val dFun=SampleClass.display()
+    val eFun=SampleClass.extendedFunction()
+}
+
+class SampleClass{
+    companion object{
+        // member function of companion object
+        fun display()= println("function inside companion object!")
+    }
+}
+
+fun SampleClass.Companion.extendedFunction(){
+    println("extension function for companion object!");
 }
 
 fun Int.maths(num:Int){
