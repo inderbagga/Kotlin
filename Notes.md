@@ -12,13 +12,13 @@
 10. Pair is a collection of 2 variables and Triple is a collection of 3 variables.
 11. lateinit modifier is used with var data type. It can change values as per proper execution. It does not work with nullable types.
 12. lazy can be initialized only once; so it is used with val data type.
-13. Enumeration is a named list of constants and contains set of constant values. Each constant enum is itself an object.
+13. Enumeration is a named list of constants(and hence, it is difficult to maintain different states of the instances.) and contains set of constant values. Each constant enum is itself an object.
     * Unlike Java enums, Kotlin enums are classes.
     * Enum constants aren’t just mere collections of constants- these have properties, methods etc
     * Each of the enum constants acts as separate instances of the class and separated by commas.
     * Enums increases readability of your code by assigning pre-defined names to constants.
     * An instance of enum class cannot be created using constructors.
-    * enum classes restrict the value a type can take, so when used with the when expression and the definition for all the constants are provided, then the need of the else clause is completely eliminated. In fact, doing so will generate a warning from the compiler.  
+    * enum classes restrict the value a type can take, so when used with when expression, and the definition for all the constants are provided, then the need of the else clause is completely eliminated. In fact, doing so will generate a warning from the compiler.  
     * Enum constants also behaves as anonymous classes by implementing their own functions along with overriding the abstract functions of the class. The most important thing is that each enum constant must be overridden.
 14. Scope Functions are functions which execute a block of code in context of an object. Scope Functions create temporary scope inside which you access the object as it or this.
     * 'it' refers to object in case of ***let*** scope function. It returns the result. It's used to access the result of call chains. It can also be used to for null check on objects of nullable type using safe call operator.
@@ -47,6 +47,11 @@
     * They are resolved statically i.e. which extension function is executed depends totally on the type of the expression on which it is invoked, rather than on the type resolved on the final execution of the expression at runtime.
     * Extension functions can also be defined with the class type that is nullable.
 18. Sealed classes conform to restricted or bounded class hierarchies. A sealed class defines a set of subclasses within it. It is used when it is known in advance that a type will conform to one of the subclass types. Sealed classes ensure type-safety by restricting the types to be matched at compile-time rather than at runtime.
-    *  Their constructors are private by default. 
-    *  A sealed class is implicitly abstract and hence it cannot be instantiated.
+    * Their constructors are private by default.
+    * As each subtype of the Enum class can be only a constant, and it has no state. However, Sealed class have different types of subclasses and also containing the state.   
+    * A sealed class is implicitly abstract and hence it cannot be instantiated.
+    * Subclasses of a sealed class, as discussed, are either ordinary classes, data classes or sealed classes themselves and hence it is easy to contain the state of the subclass.
+    * Abstract vs Sealed: 
+      * An abstract class can have their hierarchies anywhere in the project, whereas a sealed class should contain all the hierarchies in the same file.
+      * When we consider abstract classes, as they allow defining hierarchies from various files in the project, and hence, the IDE cannot understand the different subclasses involved. Hence, the compiler throws an error stating that an else case should be mentioned. But, there is no requirement to add an else case in sealed class.
 19.     
