@@ -19,6 +19,17 @@ fun main(){
     }
     println(info)
 
+    val person: Person? = null
+
+    val data=with(person){
+        this?.phoneNumber=876
+        this?.name = "Ricky"
+        this?.address = "Australia"
+        this?.getInfo()
+    }
+
+    println("data is $data")
+
     //apply scope function
     var pInfo=Person("James",23).apply {
         address="england"
