@@ -54,4 +54,10 @@
     * Abstract vs Sealed: 
       * An abstract class can have their hierarchies anywhere in the project, whereas a sealed class should contain all the hierarchies in the same file.
       * When we consider abstract classes, as they allow defining hierarchies from various files in the project, and hence, the IDE cannot understand the different subclasses involved. Hence, the compiler throws an error stating that an else case should be mentioned. But, there is no requirement to add an else case in sealed class.
-19.     
+19. Equality in Kotlin (‘==’, ‘===’ and ‘equals’)
+    * These are used to compare the data of two variables or objects, or the references of two objects in Kotlin.
+      * Structural Equality (‘==’) == operator is used to compare the data of two variables.
+      * Referential equality (‘===’) === operator is used to compare the reference of two variable or object. It will only be true if both the objects or variables pointing to the same object.
+      * equals(other: Any?) method is implemented in Any class and can be overridden in any extending class. .equals method also compares the content of the variables or objects just like == operator, but it behaves differently in case of Float and Double comparison.
+    
+        

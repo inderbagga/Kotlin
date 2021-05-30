@@ -1,5 +1,3 @@
-import javax.xml.crypto.Data
-
 fun main(){
 
     var apple=Fruit.Apple()
@@ -19,7 +17,7 @@ fun main(){
         //is is not required for SingleTon
         JuniorDev -> {"Welcome aboard! We wish you an awesome Experience!"}
         //no else case is required since all cases are handled
-    }
+    }.let { println(it) }
 }
 
 //This is how we can have the state(name, age, and etc) in the sealed class which is not possible with enum.
