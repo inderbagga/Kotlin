@@ -21,18 +21,27 @@
     * enum classes restrict the value a type can take, so when used with when expression, and the definition for all the constants are provided, then the need of the else clause is completely eliminated. In fact, doing so will generate a warning from the compiler.  
     * Enum constants also behaves as anonymous classes by implementing their own functions along with overriding the abstract functions of the class. The most important thing is that each enum constant must be overridden.
 14. Scope Functions are functions which execute a block of code in context of an object. Scope Functions create temporary scope inside which you access the object as it or this.
-    * ***let*** scope function returns the result. It's used to access the result of call chains. It can also be used to for null check on objects of nullable type using safe call operator.
+    * ***let*** scope function is used to access the result of call chains. 
+      * The context object is available as an argument (it). The return value is the lambda result.
+      * It can also be used for null check on objects of nullable type using safe call operator.
     * ***run*** scope function  is useful when the lambda contains both the object initialization and the computation of the return value.
-      * The context object is available as a receiver (this ). The return value is the lambda result.
+      * The context object is available as a receiver (this). The return value is the lambda result.
       * run does the same as with but invokes as let- as an extension function of the context object.
-      * Non-extension run lets you execute a block of several statements where an expression is required.  
-    * ***apply*** scope function is used to initialize an object and return the same object.
-    * ***also*** scope function is used to perform some side operation like logging or debugging. It can be used as grammatical where we can read as "also do the following with the object"
-    * ***let*** and ***run*** scope functions transform the object, but ***apply*** and ***also*** doesn't.
+      * Non-extension run lets you execute a block of several statements where an expression is required.
+    * ***with*** scope function is a non-extension function and can only be the starting point of any expression.
+      * The context object is passed as an argument, but inside the lambda, it's available as a receiver (this ). The return value is the lambda result. 
+      * It can be used as grammatical where we can read as "with this object, do the following.".
+      * with introduces a helper object whose properties or functions will be used for calculating a value.
+    * ***apply*** is used for code blocks that don't return a value and mainly operate on the members of the receiver object. 
+      * The common case for apply is the object configuration. Such calls can be read as “ apply the following assignments to the object.”
+      * The context object is available as a receiver (this ). The return value is the object itself.
+    * ***also*** scope function is used to perform some side operation like logging or debugging. 
+      * The context object is available as an argument (it ). The return value is the object itself.
+      * It can be used as grammatical where we can read as "also do the following with the object"
+    * let and run scope functions transform the object, but ***apply*** and ***also*** doesn't.
     * For chaining purpose, we have let, also and apply scope functions. 
-    * ***with*** can only be the starting point of any expression by passing context object as an argument. It can be used as grammatical where we can read as "with this object, do the following.".
      
-      [![Scope Functions](https://github.com/inderbagga/Kotlin/blob/master/screenshots/jvm_enable_assertion.png)](https://www.github.com/inderbagga)  
+      [![Scope Functions](https://github.com/inderbagga/Kotlin/blob/master/screenshots/scope_functions.png)](https://www.github.com/inderbagga)  
 
 15. Generics are the powerful features that allow us to define classes, methods and properties which are accessible using different data types while keeping a check of the compile-time type safety.
     * We always use angle brackets <> to specify the type parameter. 
