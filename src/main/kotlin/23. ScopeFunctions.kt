@@ -19,7 +19,7 @@ fun main(){
     }
     println(info)
 
-    val person: Person? = null
+    val person: Person? = Person("Dhoni",38)
 
     val data=with(person){
         this?.phoneNumber=876
