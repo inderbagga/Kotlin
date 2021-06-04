@@ -3,12 +3,14 @@ package com.inderbagga.kotlin.generics
 fun main(){
 
     //Variance with out
-    val outClassObject:Out<String> =Out("String")
-    val superTypeObject:Out<Any> =outClassObject
+    val subStringObject:Out<String> =Out("String")
+    val superAnyObject:Out<Any> =subStringObject
+    superAnyObject.get().let { println(it) }
 
     //Variance with in
-    val inClassObject: In<Number> = In()
-    val subTypeObject : In<Int> = inClassObject
+    val superNumberObject: In<Number> = In()
+    val subIntegerObject : In<Int> = superNumberObject
+    subIntegerObject.toString(123).let { println(it) }
 
     //Co-Variance
     val coSubType:MyClass<out Any> =MyClass<String>() //String is a subtype of Any
