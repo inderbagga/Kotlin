@@ -1,3 +1,5 @@
+package com.inderbagga.kotlin.equality
+
 fun main(){
 
     val int1 = 10
