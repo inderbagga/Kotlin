@@ -3,7 +3,7 @@ package com.inderbagga.java;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HashMapExample{
+public class ExampleHashMap {
     public static void main(String args[]){
         HashMap<Integer,String> map=new HashMap<Integer,String>();//Creating HashMap
         map.put(1,"Mango");  //Put elements in Map

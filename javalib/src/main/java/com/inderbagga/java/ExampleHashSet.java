@@ -2,10 +2,9 @@ package com.inderbagga.java;
 
 import java.util.HashSet;
 
-public class HashSetExample
+public class ExampleHashSet
 {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         //creating object of HashSet
         HashSet<String> hs= new HashSet<String>();
         //adding values to HashSet
