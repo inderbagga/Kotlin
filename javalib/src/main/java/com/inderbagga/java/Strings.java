@@ -3,6 +3,7 @@ package com.inderbagga.java;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Stack;
 
 public class Strings {
@@ -40,7 +41,7 @@ public class Strings {
                         break;
                     }
                     temp = stack.pop();
-                    if(temp == "}"||temp == ")"){
+                    if(Objects.equals(temp, "}") || Objects.equals(temp, ")")){
                         flag = false;
                         break;
                     }
@@ -51,7 +52,7 @@ public class Strings {
                         break;
                     }
                     temp = stack.pop();
-                    if(temp == "}"||temp == "]"){
+                    if(Objects.equals(temp, "}") || Objects.equals(temp, "]")){
                         flag = false;
                         break;
                     }
@@ -62,7 +63,7 @@ public class Strings {
                         break;
                     }
                     temp = stack.pop();
-                    if(temp == ")"||temp == "]"){
+                    if(Objects.equals(temp, ")") || Objects.equals(temp, "]")){
                         flag = false;
                         break;
                     }
