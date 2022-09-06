@@ -1,6 +1,7 @@
 package com.inderbagga.java;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Numbers {
@@ -62,7 +63,11 @@ public class Numbers {
                 }
             }
         }
-
         System.out.println("Winner card is :"+highestCard);
+    }
+
+    public void subSets(List<Integer> numList) {
+
+
     }
 }

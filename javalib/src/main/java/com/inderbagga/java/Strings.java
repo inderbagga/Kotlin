@@ -2,11 +2,41 @@ package com.inderbagga.java;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.Stack;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Strings {
+
+    void uniqueWord(String input){
+        Pattern p = Pattern.compile("[a-zA-Z]+");
+        Matcher m = p.matcher(input);
+
+        HashMap<String, Integer> hm = new HashMap<>();
+
+        while(m.find()){
+            String word = m.group();
+            if(hm.containsKey(word)){
+                hm.put(word,hm.get(word)+1);
+            }else hm.put(word,1);
+        }
+
+        Set<String> dataSet = hm.keySet();
+        Iterator<String> i = dataSet.iterator();
+
+        System.out.println("Unique words are:");
+
+        while(i.hasNext()){
+            String word = i.next();
+            if(hm.get(word) == 1){
+                System.out.println(word);
+            }
+        }
+    }
 
     void findDuplicate(String input){
         Map<Character,Integer> dataMap = new HashMap();

@@ -16,6 +16,9 @@ public class NumberEntrypoint {
         testCase.add(Arrays.asList(1,2,2,4,4,1));
         testCase.add(Arrays.asList(1,2,3));
 
+        List<Integer> numList = new ArrayList<>();
+        numList.addAll(Arrays.asList(1,2,3));
+
         Scanner scanner = new Scanner(System.in);
 
         /*System.out.println("Enter a:");
@@ -23,7 +26,7 @@ public class NumberEntrypoint {
         System.out.println("Enter b:");
         int b = scanner.nextInt();*/
 
-        System.out.println("Enter input:");
+        /*System.out.println("Enter input:");
         String input = scanner.nextLine();
 
         String[] arrays = input.split(",");
@@ -34,8 +37,8 @@ public class NumberEntrypoint {
             for(int item = 0; item< card.length; item++){
                 cards[index][item] = Integer.parseInt(card[item]);
             }
-        }
+        }*/
 
-        number.winningCard(cards);
+        number.subSets(numList);
     }
 }

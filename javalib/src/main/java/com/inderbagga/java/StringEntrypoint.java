@@ -12,6 +12,6 @@ public class StringEntrypoint {
         System.out.println("Enter input:");
         String input = scanner.nextLine();
 
-        string.checkIfBalanced(input);
+        string.uniqueWord(input);
     }
 }
