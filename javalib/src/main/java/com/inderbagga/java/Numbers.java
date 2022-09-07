@@ -1,5 +1,7 @@
 package com.inderbagga.java;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -67,7 +69,20 @@ public class Numbers {
     }
 
     public void subSets(List<Integer> numList) {
-
-
+        Collections.sort(numList);
+        List<List<Integer> > output = new ArrayList();
+        int n = numList.size();
+        Collections.reverse(numList);
+        for (int i = (int)Math.pow(2, n); i < Math.pow(2, n + 1); i++) {
+            String strBinary = Integer.toBinaryString(i).substring(1);
+            List<Integer> subSet = new ArrayList<>();
+            for (int j = 0; j < n; j++) {
+                if (strBinary.charAt(j) == '1')
+                    subSet.add(numList.get(j));
+            }
+            Collections.reverse(subSet);
+            output.add(subSet);
+        }
+        System.out.println("output = "+output);
     }
 }

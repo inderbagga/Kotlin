@@ -17,7 +17,7 @@ public class NumberEntrypoint {
         testCase.add(Arrays.asList(1,2,3));
 
         List<Integer> numList = new ArrayList<>();
-        numList.addAll(Arrays.asList(1,2,3));
+        numList.addAll(Arrays.asList(0));
 
         Scanner scanner = new Scanner(System.in);
 
